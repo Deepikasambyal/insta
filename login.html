@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+        <style>
+                 .box    {
+                        height: 350px;  
+                        width: 325px;
+                       padding: 10px;
+                       border: 1px solid #e6e6e6 ;
+                       margin-left: 32em;
+                        margin-top:5em;
+                         border-radius: 3px;
+                    }
+         #username{margin-top: 30px;
+                   height:27px;
+                  width:200px;
+                   color:whitesmoke;
+                 margin-bottom: 5px;
+                  background-color:rgba(228, 194, 194, 0.08);
+                  }
+         #password{margin-left: 2px;
+                  height:27px;
+                  color:whitesmoke;
+                    width: 200px;
+                 background-color:rgba(228, 194, 194, 0.08);
+                
+                }
+         body{
+                 background: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAFkAWQMBIgACEQEDEQH/xAAZAAEBAQEBAQAAAAAAAAAAAAACAQAFAwf/xAAhEAEBAAEEAgIDAAAAAAAAAAAAARECITFBEmGB8CJRcf/EABoBAAIDAQEAAAAAAAAAAAAAAAIDAQQFAAb/xAAYEQEBAQEBAAAAAAAAAAAAAAAAAQIREv/aAAwDAQACEQMRAD8A+ad1G7rMx7hiiSHIgUjTJTKSFIi02ZaZXFWQpA9NmUbdfhcIH5E8VsHhHXXLn91Y15qw5RiwokOQNp2Y0hxJCBTpGwWGkKI6bMpI2DjSB6ZMjg8X9Rjz6d1Ny5ZRCh9ZmYULTEhwFPzFhSJDkDT8xpCkaFgNNkZZFkXATZkcH4tjY8O6Ly4/ZzkSixWPk9JQdPBwFPzChyDDgasZiw5BKQFOzCkKRJDk9BtPzExsfh7ST+H+X2I6Py4c5KDOSi3WBk5wcDScBVjJwoMKAp+T0nAhwNWMnCgQ4Cn5KTZ6vKXY/JBrhdlOV7KLtebzWhRYULqxmtODjQoGn5rQounlZwGnZqylKkKdBp8rZemwGjg/Vf/Z");
+                background-size: cover;
+                 background-repeat: no-repeat;
+
+         }
+               .login{
+                        
+                         background: rgb(138,43,226);
+                         border-color: whitesmoke;
+                        color: white;
+                        font-size: 20px;
+                        width: 12.13em;
+                        height: 34px;
+                        margin-top: 22px;
+                        border-radius: 6px;
+                       margin-left: 36px;
+                       
+                }
+                label{
+                        color:whitesmoke;
+                        font-size: 11px;
+                        font-family: monospace;
+                }
+        </style>
+<body><div class="box">
+<form method="post" action="feed/">
+    {% csrf_token %}
+<img src="http://i.imgur.com/HsvCLVl.png?1" style="margin-left:78px ">
+      <div>
+          <label for="username">Username: </label>
+          <input id="username" type="text" name="username" value={{ username }}>
+      </div>
+
+      <div>
+          <label for="password">Password: </label>
+          <input id="password" type="password" name="password" value={{ password }}>
+      </div>
+        
+      <input  class="login" type="submit" value="Log In">
+        
+        </form></div>
+  </body>
+</html>
